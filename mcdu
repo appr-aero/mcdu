@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if [ -z $1 ]
+then
+    echo "No Arguments passed."
+elif [ $1 == "pico" ]
+    then
+    cd ~
+    git clone https://github.com/74ls04/pico-wsl-setup.git
+    cd pico-wsl-setup
+    ./pico_wsl_setup.sh
+elif [ $1 == "tinyairbus" ]
+then
+    cd ~ 
+    mkdir APPR.AERO
+    cd ~/APPR.AERO
+    git clone https://github.com/appr.aero/tinythreetwenty
+elif [ $1 == "clean" ]
+then
+    cd ~
+    rm -rf pico-wsl-setup
+fi 
